@@ -23,7 +23,7 @@ and then input the following command:
 
 $ wget https://github.com/BioInfoTools/BBMap/releases/download/v35.85/BBMap_35.85.tar.gz
 
-$ tar --xvzf BBMap_(version).tar.gz ( version- BBMap_35.85.tar.gz )
+$ tar --xzvf BBMap_(version).tar.gz ( version- BBMap_35.85.tar.gz )
 
 4) Kallisto
 Kallisto is a program for quantifying transcript abundances through pseudoalignment for
