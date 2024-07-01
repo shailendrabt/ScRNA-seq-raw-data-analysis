@@ -1,0 +1,13 @@
+{
+	"n_targets": 149138,
+	"n_bootstraps": 0,
+	"n_processed": 17938367,
+	"n_pseudoaligned": 11847323,
+	"n_unique": 4397395,
+	"p_pseudoaligned": 66.0,
+	"p_unique": 24.5,
+	"kallisto_version": "0.46.2",
+	"index_version": 10,
+	"start_time": "Mon Jul  1 17:09:53 2024",
+	"call": "kallisto quant -i transcripts.idx -o output -b 100 --single -l 180 -s 20 trim38.fq.gz"
+}
