@@ -127,24 +127,36 @@ Go to the summaries tab and to kallisto table to view the transcript abundances.
 Save this table as it will be needed to generate a data matrix. Processed data can
 also be viewed for alignment QC metrics.
 > 
-F) Singular          ####################################################################
-Singular is an analysis toolset offered gratis through Fluidigm. Its ease of use through a
-graphical interface makes it easy for beginners in bioinformatics to perform basic analysis.
-However, this R package does not work with Mac computers. Singular analysis toolset
-software and practice sets can be downloaded from www.fluidigm.com/software. To install
-the package, in R, go to the packages tab and click install packages from local files. Then,
-select the downloaded zipped file.
-Once installed, in R, type:
-> Library(fluidigmSC)
-> firstRun()
+# F) using seurat 
+use .h5 file
+# script to perform standard workflow steps to analyze single cell RNA-Seq data
+# data: 20k Mixture of NSCLC DTCs from 7 donors, 3' v3.1
+getwd()
+setwd("seurat/")
+devtools::install_version(package = 'Seurat', version = package_version('3.2.3'))
+BiocManager::install("Seurat")
+install.packages("Matrix", repos = "http://R-Forge.R-project.org")
+getwd()
+setwd("Downloads/ScRNA-Seq/seurat/")
+install.packages("seurat")
+library(Seurat)
+library(tidyverse)
+install.packages("hdf5r")
+library("hdf5r")
+BiocManager::install("rhdf5r")
+# 1. QC -------(quality control)
+# 2. Filtering -----------------(filtering)
+# 3. Normalize data ----------(Data normalization)
 
-G) SCDE       ##########################################################################
-SCDE is an R package used in the statistical analysis of single-cell RNA-seq data. Use this
-to observe differential expression across samples.
-To install SCDE use the following packages in R:
-> source(“https://bioconductor.org/biocLite.R”)
-Author Manuscript
-> biocLite(“scde”)
+# 4. Identify highly variable features --------------
+# Identify the 10 most highly variable genes
 
-H) DAVID        ###########################################################################
-To use DAVID, proceed to the following URL: david.ncifcrf.gov.
+# plot variable features with and without labels
+# 5. Scaling ------------
+
+# 6. Perform Linear dimensionality reduction --------------
+# visualize PCA results
+# determine dimensionality of the data
+# 7. Clustering ------------
+
+
